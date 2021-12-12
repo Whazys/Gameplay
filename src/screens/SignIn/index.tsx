@@ -1,34 +1,43 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { View,
     Text,
     TextInput,
-    Image} from 'react-native'
+    Image,
+    StatusBar
+} from 'react-native'
 
+import { ButtonIcon } from "../../components/ButtonIcon";
 import IllustrationImg from '../../assets/illustration.png'
 import { styles } from './styles'
 
 export function SignIn (){
-    const [text, setText] = useState('')
-
 
     return (
         <View style={styles.container}>
+            <StatusBar
+                barStyle="light-content"
+                backgroundColor="transparent"
+                translucent
+            />
             <Image source={IllustrationImg}
-                   style={styles.img}
+                   style={styles.image}
                    resizeMode="stretch"
                     />
 
             <View style={styles.content}>
                 <Text style={styles.title}>
-                    Organize {'\n'}
-                    suas jogatinas {'\n'}
-                    facilmente
+                    Venha puta {'\n'}
+                    {/*suas jogatinas {'\n'}*/}
+                    {/*facilmente*/}
                 </Text>
 
                 <Text style={styles.subtitle}>
-                    Crie grupos para jogar seus games {'\n'}
-                    favoritos com seus amigos
+                    Chame seus amigos {'\n'}
+                    Para xingar a mãe de todos nesse game
                 </Text>
+
+                <ButtonIcon />
+
             </View>
         </View>
     )
