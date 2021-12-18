@@ -9,19 +9,24 @@ export function Profile () {
 
             <Avatar urlImage="https://github.com/Whazys.png"/>
 
-            <View style={styles.user}>
-                <Text style={styles.greeting}>
-                    Olá
-                </Text>
+            <View>
+                <View style={styles.user}>
+                    <Text style={styles.greeting}>
+                        Olá,
+                    </Text>
 
-                <Text style={styles.username}>
-                    Rafael
+                    <Text style={styles.username}>
+                        Rafael
+                    </Text>
+                </View>
+
+                <Text style={styles.message}>
+                    Hoje é dia de vitória!
                 </Text>
             </View>
 
-            <Text style={styles.message}>
-                Hoje é dia de Vitória !
-            </Text>
+
+
 
         </View>
     )

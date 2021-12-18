@@ -4,14 +4,16 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { Home } from '../screens/Home'
 import { SignIn } from '../screens/SignIn'
 
-const { Navigator, Screen } =  createNativeStackNavigator ()
+const { Navigator, Screen } = createStackNavigator();
 
 export function AuthRoutes () {
     return (
         <Navigator
             headerMode="none"
             screenOptions={{
-                card
+                cardStyle: {
+                    backgroundColor: 'transparent'
+                }
             }}
         >
             <Screen
@@ -25,5 +27,6 @@ export function AuthRoutes () {
             />
 
         </Navigator>
+
     )
 }
