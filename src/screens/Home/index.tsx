@@ -8,6 +8,8 @@ import { Profile } from "../../components/Profile";
 import { ListHeader } from '../../components/ListHeader';
 import { Appointment } from '../../components/Appointment';
 import { ListDivider } from '../../components/ListDivider';
+import { Background } from '../../components/Background'
+
 
 import { styles } from './styles'
 
@@ -27,7 +29,6 @@ export function Home () {
             date: '19/12 às 20:30h',
             description: 'É hoje que vamos chegar ao challenger sem perder uma partida da Md10'
         },
-        
     ]
 
     function handleCategorySelect(categoryId: string) {
@@ -36,7 +37,7 @@ export function Home () {
     }
 
 return (
-    <View>
+    <Background>
            <View style={styles.header}>
                 <Profile/>
                 <ButtonAdd/>
@@ -61,6 +62,6 @@ return (
              showsVerticalScrollIndicator={false}
             />
         </View>
-     </View>
+     </Background>
     )
 }
