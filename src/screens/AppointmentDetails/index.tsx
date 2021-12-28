@@ -8,9 +8,12 @@ import { Fontisto } from '@expo/vector-icons'
 
 import {theme} from "../../global/styles/theme";
 
+import { ListDivider } from "../../components/ListDivider";
+import { ButtonIcon } from "../../components/ButtonIcon";
 import { Member } from "../../components/Member";
 import BannerImg from '../../assets/Banner.png'
 import { styles } from './styles';
+import {ButtonAdd} from "../../components/ButtonAdd";
 
 export function AppointmentDetails () {
     const members = [
@@ -62,11 +65,12 @@ export function AppointmentDetails () {
             renderItem={({item}) => (
                 <Member data={item}/>
             )}
+            ItemSeparatorComponent={() => <ListDivider/>}
+            style={styles.members}
         />
-
-
-
-
+        <View style={styles.footer}>
+            <ButtonIcon title="Entrar na Partida"/>
+        </View>
         </Background>
     )
 }
