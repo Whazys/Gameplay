@@ -19,7 +19,7 @@ export function Home () {
 
     const navigation = useNavigation()
 
-    const appointements = [
+    const appointments = [
         { 
             id: '1',
             guild: {
@@ -32,6 +32,18 @@ export function Home () {
             date: '19/12 às 20:30h',
             description: 'É hoje que vamos chegar ao challenger sem perder uma partida da Md10'
         },
+        {
+            id: '2',
+            guild: {
+                id: '1',
+                name: 'Lendários',
+                icon: null,
+                owner: true
+            },
+            category: '1',
+            date: '19/12 às 20:30h',
+            description: 'É hoje que vamos chegar ao challenger sem perder uma partida da Md10'
+        }
     ]
 
     function handleCategorySelect(categoryId: string) {
@@ -56,13 +68,12 @@ return (
               categorySelected={category}
               setCategory={handleCategorySelect}
           />
-         <View style={styles.container}>
              <ListHeader
                title="Partidas agendadas"
                subtitle="Total 06"
              />
-            <FlatList 
-                     data={appointements}
+            <FlatList
+                     data={appointments}
                      keyExtractor={item => item.id}
                      renderItem={({ item }) => (
                      <Appointment
@@ -71,10 +82,10 @@ return (
                      />
                   )}
              ItemSeparatorComponent={() => <ListDivider/>}
+             contentContainerStyle={{ paddingBottom: 69 }}
              style={styles.matches}
              showsVerticalScrollIndicator={false}
             />
-        </View>
      </Background>
     )
 }

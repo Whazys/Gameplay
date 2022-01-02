@@ -22,7 +22,7 @@ export function Guilds ({ handleGuildSelect }: Props){
             name: 'Galera',
             icon: 'image.png',
             owner: true,
-        }
+        },
     ]
     return (
         <View style={styles.container}>
@@ -36,7 +36,9 @@ export function Guilds ({ handleGuildSelect }: Props){
                     />
                 )}
                 showsVerticalScrollIndicator={false}
-                ItemSeparatorComponent={() => <ListDivider/>}
+                ItemSeparatorComponent={() => <ListDivider isCentered/>}
+                ListHeaderComponent={() => <ListDivider isCentered/>}
+                contentContainerStyle={{ paddingBottom: 68, paddingTop: 103 }}
                 style={styles.guilds}
             />
         </View>
