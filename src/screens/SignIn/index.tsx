@@ -6,12 +6,12 @@ import IllustrationImg from '../../assets/illustration.png'
 import { styles } from './styles'
 import { ButtonIcon } from "../../components/ButtonIcon";
 import { Background } from '../../components/Background'
-import { AuthContext } from '../../hooks/auth'
+import { useAuth } from "../../hooks/auth";
 
 export function SignIn (){
     const navigation = useNavigation()
 
-    const context = useContext(AuthContext)
+    const { user } = useAuth()
 
     function handleSignIn() {
         navigation.navigate('Home')
